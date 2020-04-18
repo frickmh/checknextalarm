@@ -2,6 +2,7 @@ package com.fric.checknextalarm;
 
 import android.app.AlarmManager;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -60,5 +61,19 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        findViewById(R.id.buttonLaunchBilling).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("launchBillingActivity", "Clicked!");
+                launchBillingActivity(view);
+            }
+        });
+    }
+
+    public void launchBillingActivity(View view) {
+        Log.i("launchBillingActivity", "Clicked!");
+        Intent i = new Intent(this, BillingActivity.class);
+        startActivity(i);
     }
 }
