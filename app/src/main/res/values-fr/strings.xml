@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Vérifier l\'alarme suivante</string>
+    <string name="Click_to_Check_Next_Alarm">Cliquez sur le bouton pour vérifier l\'alarme suivante</string>
+    <string name="Alarm_Data">Données d\'alarme:</string>
+    <string name="Package_Name">Nom du paquet:</string>
+    <string name="Intent_Sender">Expéditeur de l\'intention</string>
+    <string name="Trigger_Time">Temps de déclenchement:</string>
+    <string name="None_Found">Aucune alarme trouvée.</string>
+</resources>

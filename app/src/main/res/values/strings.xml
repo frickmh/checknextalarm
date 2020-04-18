@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Check Next Alarm</string>
+    <string name="Click_to_Check_Next_Alarm">Click the Button to Check Next Alarm</string>
+    <string name="Alarm_Data">Alarm Data:</string>
+    <string name="Package_Name">Package Name:</string>
+    <string name="Intent_Sender">Intent Sender:</string>
+    <string name="Trigger_Time">Trigger Time:</string>
+    <string name="None_Found">None found.</string>
+</resources>
