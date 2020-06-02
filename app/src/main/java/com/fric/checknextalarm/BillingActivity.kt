@@ -9,7 +9,7 @@ import com.android.billingclient.api.*
 class BillingActivity : AppCompatActivity(), PurchasesUpdatedListener {
 
     private lateinit var billingClient: BillingClient
-    private val skuList = listOf("test_product_one", "test_product_two")
+    private val skuList = listOf("test_product_one", "test_product_two", "test_product_three")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +33,7 @@ class BillingActivity : AppCompatActivity(), PurchasesUpdatedListener {
                 }
             }
 
-            private fun loadAllSkus() = if (billingClient.isReady) {
+            private fun loadAllSkus(): Any = if (billingClient.isReady) {
                 val params = SkuDetailsParams
                         .newBuilder()
                         .setSkusList(skuList)
@@ -44,8 +44,9 @@ class BillingActivity : AppCompatActivity(), PurchasesUpdatedListener {
                     if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && skuDetailsList.isNotEmpty()) {
                         Log.i("MainActivity", "Billing Result OK")
                         for (skuDetails in skuDetailsList) {
+                            Log.i("MainActivity", "Got Sku detail: ${skuDetails}")
                             // This will return both the SKUs from Google Play Console
-                            if (skuDetails.sku == "test_product_two") {
+                            if (skuDetails.sku == "test_product_three") {     // Whatever the last product is
                                 val buttonBuyProduct = findViewById(R.id.buttonBuyProduct) as Button
                                 buttonBuyProduct.setOnClickListener {
                                     println("Purchase Clicked")
